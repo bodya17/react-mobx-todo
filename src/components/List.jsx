@@ -6,7 +6,7 @@ import Todo from './Todo';
 function List(props) {
     return (
         <section className="todo-list">
-            {!props.fetching && props.todos.length ?
+            {/* {!props.fetching && props.todos.length ?
                 props.todos.map(todo =>
                     <Todo
                         key={todo.id}
@@ -17,7 +17,7 @@ function List(props) {
                         onToggle={props.onToggle}
                         onEdit={props.onEdit}
                     />)
-                :
+                : */}
                 <div className="loading">Загрузка...</div>
             }
         </section>

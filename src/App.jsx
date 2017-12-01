@@ -1,15 +1,15 @@
 import React from 'react';
 
 import Header from './components/Header';
+import List from './components/List';
 // import FilterContainer from './components/FilterContainer';
-// import ListContainer from './components/ListContainer';
 // import FormContainer from './components/FormContainer';
 
 function App() {
     return (
         <main>
-            todolist
             <Header />
+            <List />
             {/* <HeaderContainer />
             <FilterContainer />
             <ListContainer />
