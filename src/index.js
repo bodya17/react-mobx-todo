@@ -6,6 +6,8 @@ import App from "./App";
 import TodoListModel from "./models/TodoListModel";
 import TodoModel from "./models/TodoModel";
 
+import "./app.css";
+
 const store = new TodoListModel();
 
 store.addTodo("Get Coffee");
