@@ -1,38 +1,26 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
-import Todo from './Todo';
+import Todo from "./Todo";
+import store from "../";
 
-function List(props) {
+import { observer } from "mobx-react";
+
+@observer
+class List extends Component {
+  render() {
     return (
-        <section className="todo-list">
-            {/* {!props.fetching && props.todos.length ?
-                props.todos.map(todo =>
-                    <Todo
-                        key={todo.id}
-                        id={todo.id}
-                        title={todo.title}
-                        completed={todo.completed}
-                        onDelete={props.onDelete}
-                        onToggle={props.onToggle}
-                        onEdit={props.onEdit}
-                    />)
-                : */}
-                <div className="loading">Загрузка...</div>
-            }
-        </section>
+      <section className="todo-list">
+        {this.props.store.filteredTodos.map((todo, i) => (
+          <Todo
+            key={todo.id}
+            todo={todo}
+            delete={() => this.props.store.filteredTodos.splice(i, 1)}
+          />
+        ))}
+      </section>
     );
+  }
 }
-
-List.propTypes = {
-    todos: PropTypes.arrayOf(PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        title: PropTypes.string.isRequired,
-        completed: PropTypes.bool.isRequired
-    })).isRequired,
-    onDelete: PropTypes.func.isRequired,
-    onToggle: PropTypes.func.isRequired,
-    onEdit: PropTypes.func.isRequired
-};
 
 export default List;

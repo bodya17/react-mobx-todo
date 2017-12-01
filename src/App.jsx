@@ -1,21 +1,17 @@
-import React from 'react';
+import React from "react";
 
-import Header from './components/Header';
-import List from './components/List';
-// import FilterContainer from './components/FilterContainer';
-// import FormContainer from './components/FormContainer';
+import Header from "./components/Header";
+import List from "./components/List";
+import Filter from "./components/Filter";
+import Form from "./components/Form";
 
-function App() {
-    return (
-        <main>
-            <Header />
-            <List />
-            {/* <HeaderContainer />
-            <FilterContainer />
-            <ListContainer />
-            <FormContainer /> */}
-        </main>
-    );
-}
+const App = props => (
+  <main>
+    <Header store={props.store} />
+    <Filter store={props.store} />
+    <List store={props.store} />
+    <Form store={props.store} />
+  </main>
+);
 
 export default App;

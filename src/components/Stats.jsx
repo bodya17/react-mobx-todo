@@ -1,37 +1,29 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
+import { observer } from "mobx-react";
 
-function Stats(props) {
-    // const total = props.todos.length;
-    // const completed = props.todos.filter(todo => todo.completed).length;
-    // const uncompleted = total - completed;
-
+@observer
+class Stats extends React.Component {
+  render() {
     return (
-        <table className="stats">
-            <tbody>
-                <tr>
-                    <th>All task:</th>
-                    {/* <td>{total}</td> */}
-                </tr>
-                <tr>
-                    <th>Done:</th>
-                    <td>{completed}</td>
-                </tr>
-                <tr>
-                    <th>Undone:</th>
-                    <td>{uncompleted}</td>
-                </tr>
-            </tbody>
-        </table>
+      <table className="stats">
+        <tbody>
+          <tr>
+            <th>All task:</th>
+            <td>{this.props.store.todos.length}</td>
+          </tr>
+          <tr>
+            <th>Done:</th>
+            <td>{this.props.store.finishedTodoCount}</td>
+          </tr>
+          <tr>
+            <th>Undone:</th>
+            <td>{this.props.store.unfinishedTodoCount}</td>
+          </tr>
+        </tbody>
+      </table>
     );
+  }
 }
-
-Stats.propTypes = {
-    todos: PropTypes.arrayOf(PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        title: PropTypes.string.isRequired,
-        completed: PropTypes.bool.isRequired
-    })).isRequired
-};
 
 export default Stats;
