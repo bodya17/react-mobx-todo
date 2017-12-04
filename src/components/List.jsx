@@ -4,8 +4,9 @@ import PropTypes from "prop-types";
 import Todo from "./Todo";
 import store from "../";
 
-import { observer } from "mobx-react";
+import { observer, inject } from "mobx-react";
 
+@inject('store')
 @observer
 class List extends Component {
   render() {

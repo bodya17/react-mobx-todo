@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { observer } from "mobx-react";
+import { observer, inject } from "mobx-react";
 
 import FilterLink from "./FilterLink";
-
+@inject('store')
 @observer
 class Filter extends Component {
   render() {

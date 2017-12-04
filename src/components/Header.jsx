@@ -7,15 +7,10 @@ import Stopwatch from "./Stopwatch";
 function Header(props) {
   return (
     <header>
-      <Stats store={props.store} />
-      <h1>Redux Todo</h1>
-      <Stopwatch />
+      <Stats />
+      <h1>Mobx Todo</h1>
     </header>
   );
 }
-
-Header.propTypes = {
-  todos: PropTypes.array.isRequired
-};
 
 export default Header;

@@ -2,7 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import Button from "./Button";
+import { inject } from "mobx-react";
 
+@inject('store')
 class Form extends React.Component {
   constructor(props) {
     super(props);

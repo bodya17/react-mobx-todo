@@ -5,6 +5,7 @@ import DevTools from "mobx-react-devtools";
 import App from "./App";
 import TodoListModel from "./models/TodoListModel";
 import TodoModel from "./models/TodoModel";
+import { Provider } from "mobx-react"
 
 import "./app.css";
 
@@ -15,10 +16,12 @@ store.addTodo("Write simpler code");
 store.todos[0].finished = true;
 
 render(
-  <div>
-    <DevTools />
-    <App store={store} />
-  </div>,
+  <Provider store={store}>
+    <div>
+      <DevTools />
+      <App store={store} />
+    </div>
+  </Provider>,
   document.getElementById("root")
 );
 
