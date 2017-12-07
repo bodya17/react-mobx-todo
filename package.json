@@ -1,28 +1,16 @@
 {
-  "name": "mobx-react-boilerplate",
+  "name": "mobx-react-todo",
   "version": "1.0.0",
-  "description": "Boilerplate for MobX + React project with JSX, ES6 and decorator compilation",
+  "description": "Simple todo app using mobx and react",
   "scripts": {
     "start": "webpack-dev-server --hot --open",
     "lint": "eslint src"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mobxjs/mobx-react-boilerplate.git"
+    "url": "https://github.com/bodya17/react-mobx-todo"
   },
-  "keywords": [
-    "react",
-    "reactjs",
-    "boilerplate",
-    "mobx",
-    "starter-kit"
-  ],
-  "author": "Michel Weststrate <mweststrate@gmail.com> (http://github.com/mweststrate)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mobxjs/mobx/issues"
-  },
-  "homepage": "http://mobxjs.github.com/mobx",
+  "keywords": ["react", "reactjs", "mobx"],
   "devDependencies": {
     "babel-core": "^6.9.1",
     "babel-loader": "^7.1.2",
@@ -36,7 +24,6 @@
     "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
-    "core-decorators": "^0.20.0",
     "mobx": "^3.0.0",
     "mobx-react": "^4.1.0",
     "mobx-react-devtools": "^4.2.11",
