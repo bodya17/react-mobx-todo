@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import Checkbox from "./Checkbox";
-import Button from "./Button";
-import { action } from "mobx";
-import { observer } from "mobx-react";
+import Checkbox from './Checkbox';
+import Button from './Button';
+import { action } from 'mobx';
+import { observer } from 'mobx-react';
 
 @observer
 class Todo extends React.Component {
@@ -48,7 +48,7 @@ class Todo extends React.Component {
   }
 
   renderDisplay() {
-    const className = `todo${this.props.finished ? " completed" : ""}`;
+    const className = `todo${this.props.finished ? ' completed' : ''}`;
 
     return (
       <div className={className}>

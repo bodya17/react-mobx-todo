@@ -1,17 +1,17 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import Button from "./Button";
-import { observer, inject } from "mobx-react";
+import Button from './Button';
+import { observer, inject } from 'mobx-react';
 
-@inject(["todoStore"])
+@inject(['todoStore'])
 @observer
 class Form extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      title: ""
+      title: ''
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -26,7 +26,7 @@ class Form extends React.Component {
     if (title) {
       this.props.todoStore.addTodo(title);
       // this.props.onAdd(title);
-      this.setState({ title: "" });
+      this.setState({ title: '' });
     }
   }
 

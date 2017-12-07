@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { observer, inject } from "mobx-react";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { observer, inject } from 'mobx-react';
 
-@inject(["todoStore"])
+@inject(['todoStore'])
 @observer
 class Stats extends React.Component {
   render() {

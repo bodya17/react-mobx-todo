@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-import Todo from "./Todo";
-import store from "../";
+import Todo from './Todo';
+import store from '../';
 
-import { observer, inject } from "mobx-react";
+import { observer, inject } from 'mobx-react';
 
-@inject(["todoStore"])
+@inject(['todoStore'])
 @observer
 class List extends Component {
   render() {

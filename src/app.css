@@ -1,7 +1,7 @@
 body {
   background-color: #fafafa;
   color: #757575;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
   margin: 0;
 }
 
@@ -16,7 +16,7 @@ button {
   min-width: 64px;
   padding: 0 16px;
   display: inline-block;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
   font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
@@ -71,7 +71,7 @@ button .material-icons {
 }
 
 input {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-size: 1rem;
   color: #757575;
   padding: 0.5em;
@@ -172,7 +172,7 @@ header h1 {
   height: 2px;
   width: 100%;
   display: block;
-  content: " ";
+  content: ' ';
   bottom: -1px;
   left: 0;
   position: absolute;

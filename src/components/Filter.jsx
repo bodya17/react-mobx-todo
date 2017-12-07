@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { observer, inject } from "mobx-react";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { observer, inject } from 'mobx-react';
 
-import FilterLink from "./FilterLink";
+import FilterLink from './FilterLink';
 
-@inject(["todoStore"])
+@inject(['todoStore'])
 @observer
 class Filter extends Component {
   render() {
@@ -12,20 +12,20 @@ class Filter extends Component {
       <div className="todo-filter">
         <FilterLink
           icon="list"
-          active={this.props.todoStore.activeFilter === "ALL"}
-          onClick={() => (this.props.todoStore.activeFilter = "ALL")}
+          active={this.props.todoStore.activeFilter === 'ALL'}
+          onClick={() => this.props.todoStore.setActiveFilter('ALL')}
         />
 
         <FilterLink
           icon="check_box"
-          active={this.props.todoStore.activeFilter === "COMPLETED"}
-          onClick={() => (this.props.todoStore.activeFilter = "COMPLETED")}
+          active={this.props.todoStore.activeFilter === 'COMPLETED'}
+          onClick={() => this.props.todoStore.setActiveFilter('COMPLETED')}
         />
 
         <FilterLink
           icon="check_box_outline_blank"
-          active={this.props.todoStore.activeFilter === "UNCOMPLETED"}
-          onClick={() => (this.props.todoStore.activeFilter = "UNCOMPLETED")}
+          active={this.props.todoStore.activeFilter === 'UNCOMPLETED'}
+          onClick={() => this.props.todoStore.setActiveFilter('UNCOMPLETED')}
         />
       </div>
     );
