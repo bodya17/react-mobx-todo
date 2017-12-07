@@ -1,6 +1,5 @@
 import React from 'react';
 import { observer, inject } from 'mobx-react';
-import autobind from 'autobind-decorator';
 
 import Button from './Button';
 
