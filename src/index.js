@@ -1,12 +1,11 @@
 import React from 'react';
 import { render } from 'react-dom';
 import DevTools from 'mobx-react-devtools';
+import { Provider } from 'mobx-react';
+import * as mobx from 'mobx';
 
 import App from './App';
 import TodoListModel from './models/TodoListModel';
-import TodoModel from './models/TodoModel';
-import { Provider } from 'mobx-react';
-import * as mobx from 'mobx';
 
 import './app.css';
 
@@ -15,7 +14,6 @@ mobx.useStrict(true);
 const store = new TodoListModel();
 
 store.addTodo('Get Coffee');
-
 store.addTodo('Write simpler code');
 store.todos[0].finished = true;
 
@@ -23,7 +21,7 @@ render(
   <Provider todoStore={store}>
     <div>
       <DevTools />
-      <App store={store} />
+      <App />
     </div>
   </Provider>,
   document.getElementById('root')

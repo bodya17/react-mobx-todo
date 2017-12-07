@@ -5,7 +5,7 @@ import List from './components/List';
 import Filter from './components/Filter';
 import Form from './components/Form';
 
-const App = props => (
+const App = () => (
   <main>
     <Header />
     <Filter />
