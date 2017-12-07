@@ -37,4 +37,10 @@ export default class TodoListModel {
   setActiveFilter(filter) {
     this.activeFilter = filter;
   }
+
+  @action
+  deleteTodo(todo) {
+    const index = this.todos.indexOf(todo);
+    this.todos.splice(index, 1);
+  }
 }

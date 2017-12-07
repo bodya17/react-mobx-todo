@@ -29,7 +29,7 @@ class Todo extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     const title = this.refs.title.value;
-    this.props.todo.title = title;
+    this.props.todo.changeTitle(title);
     this.setState({ editing: false });
   }
 
@@ -37,9 +37,8 @@ class Todo extends React.Component {
     this.props.delete();
   }
 
-  @action
   handleToggle() {
-    this.props.todo.finished = !this.props.todo.finished;
+    this.props.todo.toggle();
   }
 
   handleEdit() {

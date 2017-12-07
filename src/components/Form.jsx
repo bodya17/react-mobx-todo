@@ -19,7 +19,7 @@ class Form extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
 
-    const title = this.state.title;
+    const { title } = this.state;
 
     if (title) {
       this.props.todoStore.addTodo(title);

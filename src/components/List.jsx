@@ -13,7 +13,7 @@ class List extends Component {
           <Todo
             key={todo.id}
             todo={todo}
-            delete={() => this.props.todoStore.filteredTodos.splice(i, 1)}
+            delete={() => this.props.todoStore.deleteTodo(todo)}
           />
         ))}
       </section>
