@@ -3,8 +3,7 @@ import PropTypes from "prop-types";
 import { observer, inject } from "mobx-react";
 
 import FilterLink from "./FilterLink";
-@inject('store')
-@observer
+@observer(["store"])
 class Filter extends Component {
   render() {
     return (

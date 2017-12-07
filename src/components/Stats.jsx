@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { observer, inject } from "mobx-react";
 
-@inject('store')
-@observer
+// @inject('store')
+@observer(['store'])
 class Stats extends React.Component {
   render() {
     return (

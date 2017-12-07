@@ -6,8 +6,7 @@ import store from "../";
 
 import { observer, inject } from "mobx-react";
 
-@inject('store')
-@observer
+@observer(["store"])
 class List extends Component {
   render() {
     return (
