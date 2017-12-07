@@ -9,7 +9,7 @@ import TodoListModel from './models/TodoListModel';
 
 import './app.css';
 
-mobx.useStrict(true);
+mobx.useStrict(true); // don't allow state modifications outside actions
 
 const store = new TodoListModel();
 
