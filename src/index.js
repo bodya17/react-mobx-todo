@@ -28,7 +28,7 @@ render(
 );
 
 setTimeout(() => {
-  store.addTodo('Get a cookie as well');
+  store.addTodo('Get a cookie as well ');
 }, 2000);
 
 window.store = store;
