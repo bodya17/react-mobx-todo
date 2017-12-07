@@ -7,7 +7,7 @@ import * as mobx from 'mobx';
 import App from './App';
 import TodoListModel from './models/TodoListModel';
 
-import './app.scss';
+import './app.css';
 
 mobx.useStrict(true);
 
