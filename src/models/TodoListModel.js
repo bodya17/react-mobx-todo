@@ -1,5 +1,4 @@
 import { observable, computed, action } from 'mobx';
-import { readonly, deprecate } from 'core-decorators';
 
 import TodoModel from './TodoModel';
 
