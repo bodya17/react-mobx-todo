@@ -10,11 +10,7 @@
     "type": "git",
     "url": "https://github.com/bodya17/react-mobx-todo"
   },
-  "keywords": [
-    "react",
-    "reactjs",
-    "mobx"
-  ],
+  "keywords": ["react", "reactjs", "mobx"],
   "devDependencies": {
     "babel-core": "^6.9.1",
     "babel-loader": "^7.1.2",
@@ -23,6 +19,8 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-1": "^6.5.0",
     "css-loader": "^0.28.7",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
     "style-loader": "^0.19.0",
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.7.1"
