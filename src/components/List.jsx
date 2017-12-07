@@ -3,22 +3,16 @@ import { observer, inject } from 'mobx-react';
 
 import Todo from './Todo';
 
-@inject(['todoStore'])
-@observer
-class List extends Component {
-  render() {
-    return (
-      <section className="todo-list">
-        {this.props.todoStore.filteredTodos.map((todo, i) => (
-          <Todo
-            key={todo.id}
-            todo={todo}
-            delete={() => this.props.todoStore.deleteTodo(todo)}
-          />
-        ))}
-      </section>
-    );
-  }
-}
+const List = props => (
+  <section className="todo-list">
+    {props.todoStore.filteredTodos.map((todo, i) => (
+      <Todo
+        key={todo.id}
+        todo={todo}
+        delete={() => props.todoStore.deleteTodo(todo)}
+      />
+    ))}
+  </section>
+);
 
-export default List;
+export default inject('todoStore')(observer(List));
