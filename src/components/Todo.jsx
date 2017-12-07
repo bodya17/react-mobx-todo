@@ -4,6 +4,7 @@ import Checkbox from './Checkbox';
 import Button from './Button';
 import { action } from 'mobx';
 import { observer } from 'mobx-react';
+import autobind from 'autobindr';
 
 @observer
 class Todo extends React.Component {
@@ -13,11 +14,7 @@ class Todo extends React.Component {
     this.state = {
       editing: false
     };
-
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleDelete = this.handleDelete.bind(this);
-    this.handleToggle = this.handleToggle.bind(this);
-    this.handleEdit = this.handleEdit.bind(this);
+    autobind(this);
   }
 
   componentDidUpdate(prevProps, prevState) {

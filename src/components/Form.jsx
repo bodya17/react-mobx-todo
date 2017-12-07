@@ -1,5 +1,6 @@
 import React from 'react';
 import { observer, inject } from 'mobx-react';
+import autobind from 'autobindr';
 
 import Button from './Button';
 
@@ -12,9 +13,7 @@ class Form extends React.Component {
     this.state = {
       title: ''
     };
-
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChange = this.handleChange.bind(this);
+    autobind(this);
   }
 
   handleSubmit(event) {
