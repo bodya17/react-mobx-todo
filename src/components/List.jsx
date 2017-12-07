@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { observer, inject } from 'mobx-react';
 
 import Todo from './Todo';
-import store from '../';
-
-import { observer, inject } from 'mobx-react';
 
 @inject(['todoStore'])
 @observer

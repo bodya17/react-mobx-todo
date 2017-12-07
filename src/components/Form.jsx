@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-
 import Button from './Button';
 import { observer, inject } from 'mobx-react';
 
@@ -25,14 +23,12 @@ class Form extends React.Component {
 
     if (title) {
       this.props.todoStore.addTodo(title);
-      // this.props.onAdd(title);
       this.setState({ title: '' });
     }
   }
 
   handleChange(event) {
     const title = event.target.value;
-
     this.setState({ title });
   }
 
@@ -55,9 +51,5 @@ class Form extends React.Component {
     );
   }
 }
-
-Form.propTypes = {
-  // onAdd: PropTypes.func.isRequired
-};
 
 export default Form;
