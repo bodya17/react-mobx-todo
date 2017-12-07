@@ -2,9 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import Button from "./Button";
-import { inject } from "mobx-react";
+import { observer, inject } from "mobx-react";
 
-@inject('store')
+@inject(["todoStore"])
+@observer
 class Form extends React.Component {
   constructor(props) {
     super(props);
@@ -23,7 +24,7 @@ class Form extends React.Component {
     const title = this.state.title;
 
     if (title) {
-      this.props.store.addTodo(title);
+      this.props.todoStore.addTodo(title);
       // this.props.onAdd(title);
       this.setState({ title: "" });
     }

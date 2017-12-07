@@ -6,8 +6,11 @@ import App from "./App";
 import TodoListModel from "./models/TodoListModel";
 import TodoModel from "./models/TodoModel";
 import { Provider } from "mobx-react"
+import * as mobx from 'mobx';
 
 import "./app.css";
+
+//mobx.useStrict(true);
 
 const store = new TodoListModel();
 
@@ -16,7 +19,7 @@ store.addTodo("Write simpler code");
 store.todos[0].finished = true;
 
 render(
-  <Provider store={store}>
+  <Provider todoStore={store}>
     <div>
       <DevTools />
       <App store={store} />
@@ -25,9 +28,8 @@ render(
   document.getElementById("root")
 );
 
-// setTimeout(() => {
-//   store.addTodo("Get a cookie as well");
-// }, 2000);
+setTimeout(() => {
+  store.addTodo("Get a cookie as well");
+}, 2000);
 
-// playing around in the console
 window.store = store;
