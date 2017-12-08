@@ -4,6 +4,7 @@
   "description": "Simple todo app using mobx and react",
   "scripts": {
     "start": "webpack-dev-server --hot --open",
+    "server": "node server.js",
     "lint": "eslint src"
   },
   "repository": {
@@ -29,10 +30,14 @@
   },
   "dependencies": {
     "autobindr": "^1.0.5",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
     "mobx": "^3.0.0",
     "mobx-react": "^4.1.0",
     "mobx-react-devtools": "^4.2.11",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-notification-system": "^0.2.16"
   }
 }

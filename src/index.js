@@ -13,9 +13,11 @@ mobx.useStrict(true); // don't allow state modifications outside actions
 
 const store = new TodoListModel();
 
-store.addTodo('Get Coffee');
-store.addTodo('Write simpler code');
-store.todos[0].finished = true;
+// store.addTodo('Get Coffee');
+// store.addTodo('Write simpler code');
+// store.todos[0].finished = true;
+
+store.fetchTodos();
 
 render(
   <Provider todoStore={store}>
@@ -27,8 +29,8 @@ render(
   document.getElementById('root')
 );
 
-setTimeout(() => {
-  store.addTodo('Get a cookie as well ');
-}, 2000);
+// setTimeout(() => {
+//   store.addTodo('Get a cookie as well ');
+// }, 2000);
 
 window.store = store;
